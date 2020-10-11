@@ -1,0 +1,32 @@
+.main {
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--color-secondary4__tint1);
+}
+.main__inner {
+  max-width: 50rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  min-height: -webkit-fill-available;
+}
+
+.header {
+  display: flex;
+  padding: 1rem 0;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  margin: 1.2rem;
+}
+
+.header form {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
