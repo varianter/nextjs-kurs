@@ -1,3 +1,3 @@
 export default function IndexPage() {
-  return <div>Hello Online! ⚡️</div>;
+  return <div> Hello Online! ⚡️</div>;
 }

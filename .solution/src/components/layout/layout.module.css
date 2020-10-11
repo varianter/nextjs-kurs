@@ -22,11 +22,10 @@
   padding: 0;
 }
 
-nav a {
+.nav a {
   margin: 1.2rem;
 }
 
 .header form {
-  align-self: flex-end;
-  justify-self: flex-end;
+  margin-left: auto;
 }

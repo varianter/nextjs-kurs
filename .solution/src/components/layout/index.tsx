@@ -1,18 +1,15 @@
-import React, { ReactNode, useState } from "react";
+import React, { PropsWithChildren, ReactNode, useState } from "react";
 import style from "./layout.module.css";
-import { Link, useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: PropsWithChildren<{}>) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const history = useHistory();
+  const router = useRouter();
 
   const performSearch = () => {
     if (searchQuery.length < 3) return;
-    history.push("/search?q=" + encodeURIComponent(searchQuery));
+    router.push("/search?q=" + encodeURIComponent(searchQuery));
   };
 
   return (
@@ -22,10 +19,9 @@ export const Layout = ({ children }: LayoutProps) => {
           <nav className={style.nav}>
             <ul>
               <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
               </li>
             </ul>
           </nav>

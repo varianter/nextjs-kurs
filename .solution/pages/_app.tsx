@@ -1,9 +1,13 @@
 import React from "react";
+import { Layout } from "src/components/layout/index";
+import "./styles.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <React.StrictMode>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </React.StrictMode>
   );
 }
