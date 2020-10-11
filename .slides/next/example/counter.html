@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="counter">0</span>
+      <button id="increment">+1</button>
+    </div>
+    <script>
+      let count = 0;
+
+      let span = document.querySelector('#counter');
+      let button = document.querySelector('#increment');
+      button.addEventListener('click', function () {
+        count = count + 1;
+        span.innerText = count;
+      });
+    </script>
+  </body>
+</html>
