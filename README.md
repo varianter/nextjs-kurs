@@ -1,5 +1,11 @@
 # Case
 
+For å kjøre lokalt
+
+```sh
+ npx create-next-app -example-path=https://github.com/varianter/nextjs-kurs/tree/base-case
+```
+
 Port blogg fra vanlig React til Next.js
 
 1. Flytt Home "/"
