@@ -1,0 +1,9 @@
+.postlist {
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.postlist li {
+  margin: 0.3rem 0;
+}
