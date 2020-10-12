@@ -1,4 +1,4 @@
-// pages/blog
+// /pages/blog
 function Blog({ posts }) {
   return (
     <ul>

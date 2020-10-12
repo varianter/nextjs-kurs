@@ -48,17 +48,6 @@ import * as imgs from './images';
 
 ---
 
-Agenda
-
-1. Om Variant
-2. React
-3. CSR, SSR, SSG, Rehydrering
-4. Pizza
-5. Next.js
-6. Case (CSR til Next.js)
-
----
-
 <SplitRight>
 
 
@@ -78,6 +67,16 @@ Agenda
 
 ---
 
+Agenda
+
+1. React
+2. CSR, SSR, SSG
+3. Next.js
+4. Mat
+5. Case (Fra CSR til Next.js)
+
+---
+
 # React
 
 - Et deklarativt javascript bibliotek for UI
@@ -89,7 +88,7 @@ Agenda
 <CodeSurfer>
 
 
-```html 12:25 file=./example/counter.html
+```html 12:25 file=./example/counter.html subtitle="Vanilla JS"
 
 ```
 
@@ -101,7 +100,7 @@ Agenda
 <CodeSurfer>
 
 
-```jsx 3:14 file=./example/Counter.js
+```jsx 3:14 file=./example/Counter.js subtitle="React"
 
 ```
 
@@ -209,16 +208,20 @@ TTI : Time to interactive
 
 ## Static Site Generation
 
-<Appear>
-
-
 - Gatsby, Jekyll, Hugo
 - Konsekvent hurtig FCP
 - Må generere en side for hver mulige URL
 - Vanskelig å bruke med hurtigendrende data.
 
-</Appear>
+---
 
+## Hva med Next.js?
+
+Next støtter alle tre metodene.
+
+Bruker hydrering for å lage combo av (SSR eller SSG) og CSR
+
+I Next.js v9.5 kom det støtte for "Incremental Static Regeneration"
 
 ---
 
@@ -233,10 +236,9 @@ React er veldig barebones
 - Routing (Path, Dynamisk, Client)
 - Innebygd støtte for de fleste CSS løsninger
 - Ferdig configurert webpack
-- Pre-rendering, SSR og SSG
 - Typescript
 - Innebygd API for Serverless funksjoner
-- Scaffolding med ´npm create-next-app´
+- Scaffolding med ´npx create-next-app´
 
 ---
 
@@ -251,7 +253,7 @@ Filbasert routing bygget på konseptet om sider (pages)
 
 
 En side er en React Component som er exportert fra en
-`.js` eller `.tsx` fil som ligger i mappen`pages`
+`.js` eller `.tsx` fil som ligger i mappen `pages/`
 
 </p>
 
@@ -495,9 +497,11 @@ Eksempel: fs.
 ## Next.js: API
 
 Next.js gir oss en enkel måte på å bygge APIer
+
 Lik syntax som Express.js
 
 Alle filer inn i `'pages/api'` vil bli behandlet som et api endepunkt.
+
 Disse er sett på som server-side bundler og påvirker ikke client-side bundle
 
 ---
@@ -509,11 +513,11 @@ Disse er sett på som server-side bundler og påvirker ikke client-side bundle
 
 ```
 
-```diff 1[33:36] subtitle="http.IncomingMessage, data fra brukeren"
+```diff 1[33:35] subtitle="http.IncomingMessage, data fra brukeren"
 
 ```
 
-```diff 1[39:42] subtitle="http.ServerResponse, response objekt til brukeren"
+```diff 1[38:40] subtitle="http.ServerResponse, response objekt til brukeren"
 
 ```
 
@@ -536,4 +540,4 @@ Port blogg fra vanlig React til Next.js
    - Returner en post på id
 3. Flytt over Search "/search?q=..."
    - Returnere alle poster, som inneholder searchQuery
-4. Implementer Static Regeneration på de som det gjelder
+4. Implementer SSR og SSG på de kan
