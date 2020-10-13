@@ -6,6 +6,8 @@ For å kjøre lokalt
  npx create-next-app -example-path=https://github.com/varianter/nextjs-kurs/tree/wo-slides
 ```
 
+For å kjøre i [codesandbox.io](http://var.show/online-sandbox) (Må forke for å kunne gjøre endringer)
+
 Port blogg fra vanlig React til Next.js
 
 1. Implementer backend
