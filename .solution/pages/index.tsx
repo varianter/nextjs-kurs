@@ -31,7 +31,7 @@ const PostLinks = ({ posts }) => {
 
 // Since getStaticProps is server function we don't need to go to via REST
 // we can ask the function directly
-export const getStaticProps = (context) => {
+export const getStaticProps = () => {
   const posts = getPosts();
   return {
     props: { posts },
