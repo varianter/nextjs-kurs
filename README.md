@@ -3,7 +3,8 @@
 For å kjøre lokalt
 
 ```sh
- npx create-next-app -example-path=https://github.com/varianter/nextjs-kurs/tree/wo-slides
+ npx create-next-app --example-path=https://github.com/varianter/nextjs-kurs/
+
 ```
 
 For å kjøre i [codesandbox.io](http://var.show/online-sandbox) (Må forke for å kunne gjøre endringer)
