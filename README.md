@@ -3,15 +3,21 @@
 For å kjøre lokalt
 
 ```sh
- npx create-next-app -example-path=https://github.com/varianter/nextjs-kurs/tree/base-case
+ npx create-next-app -example-path=https://github.com/varianter/nextjs-kurs/tree/wo-slides
 ```
 
 Port blogg fra vanlig React til Next.js
 
-1. Flytt Home "/"
-   - Hent alle blogposter
-2. Flytt Post "/posts/:id"
-   - Returner en post på id
-3. Flytt over Search "/search?q=..."
+1. Implementer backend
+   - GET:posts/ Returner liste med id og tittel for hver blogg
+   - GET:posts/\[id\] Returner bloggpost med id
+   - GET:search/q?={searchQuery} Returner id og tittel på blogposter som har har innhold som matcher SearchQuery
+2. Flytt Home "/"
+   - Erstatt routing - react-router til next/link
+   - Implementer Pre-rendring
+3. Flytt Post "/posts/:id"
+   - Erstatt routing
+   - Implementer Pre-rendring
+4. Flytt over Search "/search?q=..."
    - Returnere alle poster, som inneholder searchQuery
-4. Implementer Static Regeneration på de som det gjelder
+5. Flytt over Layout
